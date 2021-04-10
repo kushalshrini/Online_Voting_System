@@ -1,0 +1,104 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.register-button{
+  padding: 10px;
+  text-decoration: none;
+  color: #333333;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #FCEABB;
+  background: -moz-linear-gradient(left, #FCEABB 0%, #F8B500 100%);
+  background: -webkit-linear-gradient(left, #FCEABB 0%, #F8B500 100%);
+  background: linear-gradient(to right, #FCEABB 0%, #F8B500 100%);
+  transition: 0.4s ease-in-out;
+}
+.vote-now-button{
+  padding: 10px;
+  text-decoration: none;
+  color: #333333;
+  border-radius: 5px;
+  background: #48C6EF;
+  color: whitesmoke;
+  font-size: 20px;
+  background: -moz-linear-gradient(-45deg, #48C6EF 0%, #6F86D6 100%);
+  background: -webkit-linear-gradient(-45deg, #48C6EF 0%, #6F86D6 100%);
+  background: linear-gradient(135deg, #48C6EF 0%, #6F86D6 100%);
+  transition: 0.4s ease-in-out;
+}
+.vote-now-button:hover{
+  -webkit-box-shadow: 10px 16px 17px 4px rgba(0,0,0,0.5);
+   box-shadow: 10px 16px 17px 4px rgba(0,0,0,0.5);
+   color: #333333;
+}
+.register-button:hover{
+  -webkit-box-shadow: 10px 16px 17px 4px rgba(0,0,0,0.5);
+   box-shadow: 10px 16px 17px 4px rgba(0,0,0,0.5);
+   color: #333333;
+}
+
+.landing-page{
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  background:Lavender;  /* fallback for old browsers */
+  //background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
+  //background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.certificate-button{
+  text-decoration: none;
+  color: #333333;
+  border: 1px solid cornsilk;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: SpringGreen;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.certificate-button:hover{
+  background-color: palegreen;
+}
+
+@media (min-width: 1300px){
+  .voting-image-div{
+    transform: scale(0.7);
+    margin-top: -5%;
+  }
+  .after-image-div{
+    margin-top: -15%;
+  }
+}
+
+@media (min-width: 1000px){
+  .voting-image-div{
+    transform: scale(0.6);
+  }
+}
+
+@media (min-width: 800px){
+  .voting-image-div{
+    transform: scale(0.6);
+  }
+  .after-image-div{
+    margin-top: -10%;
+  }
+}
+
+@media(max-width: 1000px){
+  .voting-image-div{
+    margin-top: 15%;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 501px){
+  .voting-image-div{
+    transform: scale(1.2);
+    margin-top: 35%;
+  }
+  .after-image-div{
+    margin-top: 7%;
+  }
+}
