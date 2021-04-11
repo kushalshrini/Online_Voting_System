@@ -1,1 +1,20 @@
-
+<div class="container form-container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 form-div">
+      <%= form_for @candidate, url: {action: :create_candidate}, method: :post do |f| %>
+        <center><h2>Add New Candidate</h2><img src="https://img.icons8.com/material-two-tone/48/000000/contract-job.png"></center>
+        <%= f.label "Name" %>
+        <%= f.text_field :name, required: true %>
+        <%#= f.label "Image path" %>
+        <%#= f.text_field :image_path, value: "https://drive.google.com/uc?export=view&id=" %><br>
+        <%= f.label "Party" %>
+        <%= f.text_field :party, required: true %><br>
+        <%= f.label "Constituency Code" %>
+        <%= f.text_field :constituency_code, required: true %><br>
+        <%= f.label "Place" %>
+        <%= f.text_field :place, required: true %><br>
+        <%= f.submit "Add Candidate", class:"voter-registration-button" %>
+      <% end %>
+  </div>
+ </div>
+</div>

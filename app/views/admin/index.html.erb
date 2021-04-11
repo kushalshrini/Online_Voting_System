@@ -1,0 +1,65 @@
+<div class="container">
+  <center><h1>Admin Panel</h1></center>
+  <div class="action-buttons" style="text-align:center;">
+    <%= link_to "Add Candidate", add_candidate_path, class: "add-candidate", method: :get %>
+    <%= link_to "RESET", reset_election_path, class: "add-candidate", method: :delete, data: {confirm: "Are you Sure?", disable_with: "Processing..."} %>
+  </div>
+  <br><br>
+  <div class="results-div">
+    <center><h2>RESULTS</h2></center>
+    <%= pie_chart Candidate.group(:vote_count).count, donut: true, download: true, colors: ["#00FF00", "#FFA500"]  %><br><br>
+    <table>
+      <tr>
+        <th>Candidate Name</th>
+        <th>Party</th>
+        <th>Constituency Code</th>
+        <th>Vote Count</th>
+      </tr>
+      <% @winners.each do |i| %>
+        <tr>
+          <td><%= i.name %></td>
+          <td><%= i.party %></td>
+          <td><%= i.constituency_code %></td>
+          <td><%= i.vote_count %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col election-details">
+      <center><h2>Voter's List</h2></center>
+      <table>
+        <tr>
+          <th>Voter Name</th>
+          <th>email</th>
+          <th>USN</th>
+        </tr>
+      <% @voters.each do |i| %>
+        <tr>
+          <td><%= i.name %></td>
+          <td><%= i.email %></td>
+          <td><%= i.usn %></td>
+        </tr>
+      <% end %>
+      </table>
+    </div>
+    <div class="col election-details">
+      <center><h2>Candidate's List</h2></center>
+      <table>
+        <tr>
+          <th>Candidate Name</th>
+          <th>Party</th>
+          <th>Constituency Code</th>
+        </tr>
+        <% @candidates.each do |i| %>
+          <tr>
+            <td><%= i.name %></td>
+            <td><%= i.party %></td>
+            <td><%= i.constituency_code %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div><br><br><br>
