@@ -1,7 +1,6 @@
-# Vote-Online👆
+# Vote-Online
+Online voting system is developed by using ROR(Ruby on Rails) with PostgreSQL as a backend database to computerize the process for check in and out system.
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
+This project covers only the basic required to sum up, developing a information system on “online voting system” for was a matter of essence.
 
-### A web-app revolutionizing Voting-system.
 
-![](vote-online-now.gif)
