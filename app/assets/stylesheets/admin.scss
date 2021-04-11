@@ -1,1 +1,53 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
+td, th {
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: Lavender;
+}
+
+.add-candidate{
+  height: 40px;
+  width: 150px;
+  border: 2px solid IndianRed  ;
+  font-size: 18px;
+  border-radius: 7px;
+  transition: 0.1s ease-in-out;
+  text-decoration: none;
+  padding: 8px;
+  margin-left: 15px;
+  color: #333333;
+}
+
+.add-candidate:hover{
+  box-shadow: 5px 5px 15px #dddd;
+  cursor: pointer;
+  outline: none;
+}
+
+.results-div{
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px #dddd;
+}
+
+.election-details{
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px #dddd;
+  margin: 6px 10px;
+}
