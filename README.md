@@ -3,7 +3,7 @@ Online voting system is developed by using ROR(Ruby on Rails) with PostgreSQL as
 
 This project covers only the basic required to sum up, developing a information system on “online voting system” for was a matter of essence.
 ### Priviledges Given:
-1.Adding Candidates: Using postgresql Admin, site administrators should be able to add, update, and remove the candidates. 
+** 1.Adding Candidates:**Using postgresql Admin, site administrators should be able to add, update, and remove the candidates. 
 
 2.Registration: The first stage of the process of the voting involves the registration part which  that registers the user as a valid Person to vote. It asks for the important features that can uniquely identify each person through his Aadhaar number (USN in this case).
 
