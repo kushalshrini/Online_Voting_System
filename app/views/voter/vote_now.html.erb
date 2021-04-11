@@ -1,1 +1,27 @@
-
+<!--
+<a href="https://drive.google.com/uc?export=view&id=1-3UHQdoswd_IrA5RPuZb_yN7pbs_oSZL"><img src="https://drive.google.com/uc?export=view&id=1-3UHQdoswd_IrA5RPuZb_yN7pbs_oSZL" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
+-->
+<div class="container">
+  <center><h1>Vote for your Candidate</h1></center><br><br>
+  <div class="row">
+    <% @candidates.each do |i| %>
+      <div class="col-md-3 voting-cards">
+        <p style="margin-bottom: 0px;"><img src="https://img.icons8.com/color/48/000000/user-male.png"></p>
+        <h2><%= i.name %></h2>
+        Party : <%= i.party %><br>
+        constituency_code : <%= i.constituency_code %><br>
+        Place : <%= i.place %><br><br>
+        <%= link_to "VOTE", register_vote_path(id: i.id), method: :post, class:"vote-button", data: {disable_with: "processing..."} %><br><br>
+      </div>
+   <% end %><br>
+  </div><br>
+  <center>
+    <p>Project by :
+      <strong>Manoj Kumar D</strong>,
+      <strong>Zahid Pasha</strong>,
+      <strong>Manoj Kumar Mangalore</strong>,
+      <strong>Mukund</strong>,
+      <strong>Kushal</strong>
+    </p>
+  </center>
+</div>
