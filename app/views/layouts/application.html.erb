@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VoteOnline</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3f3d56">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3f3d56">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <% if !flash.empty? %>
+      <% flash.each do |key,msg| %>
+        <center><h2><strong style="color: OrangeRed;"><%= msg %></strong></h2></center>
+      <% end %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
