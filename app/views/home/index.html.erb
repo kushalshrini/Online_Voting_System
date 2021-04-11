@@ -1,1 +1,48 @@
-
+<div class="container-fluid landing-page" style="text-align: center;">
+  <div class="row">
+    <div class="col text-center">
+      <h1 style="margin-bottom: 0px;">One Vote can Rock the Boat, <b>Vote Now!</b></h1>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-8 voting-image-div">
+      <%= image_tag "voting.png", class: "voting-image", style: 'height: 100%; width: 100%; object-fit: contain' %>
+    </div>
+  </div>
+  <br><br>
+  <div class="row justify-content-center">
+    <div class="col">
+      <div class="after-image-div">
+          <% if !session["voted"] and !current_user %>
+            <%= link_to "REGISTER", voter_registration_path, class: "register-button" %><br>
+            <p>Project by :
+              <strong>Manoj Kumar D</strong>,
+              <strong>Zahid Pasha</strong>,
+              <strong>Manoj Kumar Mangalore</strong>,
+              <strong>Mukund</strong>,
+              <strong>Kushal</strong>
+            </p>
+          <% end %>
+          <% if session["voted"] == true %>
+            <img src="https://img.icons8.com/color/36/000000/ok--v2.png">
+            <h3>Your vote has been registered, Thanks for Participation!</h3>
+            <a href="<%= voter_pdf_path %>.pdf" class="certificate-button">Your Certificate</a>
+            <br><br>
+          <% end %>
+          <% if current_user and !current_user.voted? %>
+            <div class="vote-now-div">
+              <%= link_to "Vote Now", vote_now_path, class: "vote-now-button" %>
+            </div>
+            <p>Project by :
+              <strong>Manoj Kumar D</strong>,
+              <strong>Zahid Pasha</strong>,
+              <strong>Manoj Kumar Mangalore</strong>,
+              <strong>Mukund</strong>,
+              <strong>Kushal</strong>
+            </p>
+          <% end %>
+          <br>
+      </div>
+    </div>
+  </div>
+</div>
